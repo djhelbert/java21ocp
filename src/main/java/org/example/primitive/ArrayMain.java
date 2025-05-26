@@ -3,7 +3,7 @@ package org.example.primitive;
 import java.util.Arrays;
 
 public class ArrayMain {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         // for(;;) is an infinite loop
 
         for(int i=0; i<10; i++) {

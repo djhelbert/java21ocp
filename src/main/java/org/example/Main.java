@@ -1,5 +1,12 @@
 package org.example;
 
+/**
+ * Valid Variable Names
+ *
+ *  Do not start with a number!
+ *
+ *  _ $ a-Z 0-9 are valid characters
+ */
 public class Main {
     /**
      * Vararg must be last argument.
