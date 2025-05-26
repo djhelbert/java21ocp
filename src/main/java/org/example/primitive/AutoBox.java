@@ -1,6 +1,6 @@
 package org.example.primitive;
 
-public class AutoBoxMain {
+public class AutoBox {
     public static void main(String[] args) {
         int i = 1;
         Integer in1 = 2;
