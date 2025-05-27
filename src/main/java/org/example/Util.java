@@ -17,6 +17,10 @@ public final class Util {
         System.out.println();
     }
 
+    public static void print(boolean b) {
+        System.out.println(b);
+    }
+
     public static void print(double d) {
         System.out.println(d);
     }
