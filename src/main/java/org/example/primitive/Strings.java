@@ -19,7 +19,7 @@ public class Strings {
     }
 
     public static void main(String... args) {
-        String s = "first";
+        String s = "first";   // Strings are immutable
         String s1 = "first";
 
         print(s1 == s);      // true
@@ -36,5 +36,13 @@ public class Strings {
 
         print(s1 == s3);      // true
         print(s1.equals(s3)); // true
+
+        print("hello world".substring(6)); // world as we start at index 6
+        print("hello world".substring(0,5));    // hello as index 5 is not included
+        print("hello world".startsWith("hel")); // true
+        print("hello world".indexOf("world"));  // 6
+
+        var text = "hello to a brave new world";
+        print(text.split(" ")); // [hello, to, a, brave, new, world]
     }
 }
