@@ -1,17 +1,18 @@
 package org.example.exception;
 
-public class TryCatch {
+public class TryWithResources {
     public static void main(String... args) {
-        try {
+        try(MyResource mr = new MyResource()) {
             throwMyException(true);
-        } catch(MyException exc) {   // must be ahead of excpetion
+        } catch(MyException exc) {   // resource is closed before catch block executes
             exc.printStackTrace();
         } catch(Exception exc) {
             exc.printStackTrace();
         }
         finally {
-            System.err.println("Finally"); // always executes
+            System.out.println("Finally"); // always executes
         }
+        System.out.println("Done");
     }
 
     private static void throwMyException(boolean thr) throws MyException {
