@@ -7,7 +7,11 @@ import java.util.ResourceBundle;
 public class ResourceBundles {
     public static void main(String args[]) {
         Locale locale = new Locale.Builder().setLanguage("en").setRegion("CA").build();
-        ResourceBundle bundle = ResourceBundle.getBundle("Labels", locale);
+        ResourceBundle bundle = ResourceBundle.getBundle("bundle/Labels", locale);
+        print(bundle.getString("hello"));
+        print(bundle.getString("error"));
+        locale = Locale.US;
+        bundle = ResourceBundle.getBundle("bundle/Labels", locale);
         print(bundle.getString("hello"));
         print(bundle.getString("error"));
     }
