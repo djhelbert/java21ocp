@@ -10,8 +10,14 @@ public class ResourceBundles {
         ResourceBundle bundle = ResourceBundle.getBundle("bundle/Labels", locale);
         print(bundle.getString("hello"));
         print(bundle.getString("error"));
+
         locale = Locale.US;
         bundle = ResourceBundle.getBundle("bundle/Labels", locale);
+        print(bundle.getString("hello"));
+        print(bundle.getString("error"));
+
+        locale = new Locale.Builder().setLanguage("pl").setRegion("PL").build();
+        bundle = ResourceBundle.getBundle("bundle.Labels", locale);
         print(bundle.getString("hello"));
         print(bundle.getString("error"));
     }

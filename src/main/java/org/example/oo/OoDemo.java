@@ -15,12 +15,14 @@ public class OoDemo {
         people.add(c);
         addTeacher(people, new Teacher("Tina", "Jenkins","Math"));
 
-        if(d instanceof Person dvr) {
-            System.out.println(dvr.getFirst() + " " + dvr.getLast() + " is a Person");
+        if(d instanceof Person drvr) {
+            System.out.println(drvr.getFirst() + " " + drvr.getLast() + " is a Person");
         }
 
         System.out.println("---People---");
         printList(people);
+
+        System.out.println(Teacher.Classroom.DIV); // Static variable can be used
     }
 
     private static void printList(List<? extends Person> list) {

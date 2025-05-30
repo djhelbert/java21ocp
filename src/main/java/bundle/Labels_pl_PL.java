@@ -1,4 +1,4 @@
-package org.example.local;
+package bundle;
 
 import java.util.ListResourceBundle;
 
