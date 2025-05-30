@@ -2,9 +2,11 @@ package org.example.flow;
 
 public class Switches {
     public static void main(String[] args) {
-        int n = 3;
+        int n = 0;
 
         switch(n) {
+            case 0:
+                System.out.println("0"); // continues if there is no break statement
             case 1: case 2:
                 System.out.println("1 or 2");
                 break;

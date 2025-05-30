@@ -15,6 +15,11 @@ public class OoDemo {
         people.add(c);
         addTeacher(people, new Teacher("Tina", "Jenkins","Math"));
 
+        if(d instanceof Person dvr) {
+            System.out.println(dvr.getFirst() + " " + dvr.getLast() + " is a Person");
+        }
+
+        System.out.println("---People---");
         printList(people);
     }
 
