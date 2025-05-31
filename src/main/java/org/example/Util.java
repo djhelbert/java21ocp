@@ -46,7 +46,7 @@ public final class Util {
         System.out.println(strings);
     }
 
-    public static void print(List<String> strings) {
+    public static void print(List<?> strings) {
         System.out.println(strings);
     }
 
