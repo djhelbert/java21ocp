@@ -3,6 +3,7 @@ package org.example;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Utility class that has been marked final.
@@ -39,6 +40,10 @@ public final class Util {
 
     public static void print(int[] numbers) {
         System.out.println(Arrays.toString(numbers));
+    }
+
+    public static void print(Set<String> strings) {
+        System.out.println(strings);
     }
 
     public static void print(List<String> strings) {
