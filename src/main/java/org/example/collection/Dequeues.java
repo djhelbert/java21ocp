@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
- * Double Ended Queue is a LIFO Data Structure:
+ * Double Ended Queue is a FIFO Data Structure:
  * offer() offerFirst() offerLast() peek() peekFirst() peekLast() poll() pollFirst() pollLast() remove() removeFirst()
  */
 public class Dequeues {
