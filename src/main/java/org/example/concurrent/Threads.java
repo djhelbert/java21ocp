@@ -6,6 +6,8 @@ public class Threads {
         Thread t2 = new MyThread();
         Thread t3 = new Thread(() -> {System.out.println("Runnable Lambda");});
 
+        t1.setDaemon(true); // JVM will terminate if only daemon threads are running
+
         t1.start();
         t2.start();
         t3.start();
