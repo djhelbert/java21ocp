@@ -19,7 +19,7 @@ public class CountDownLatchDemo {
     }
 
     private static class Worker implements Runnable {
-        private CountDownLatch latch;
+        private final CountDownLatch latch;
 
         public Worker(CountDownLatch countDownLatch) {
             this.latch = countDownLatch;

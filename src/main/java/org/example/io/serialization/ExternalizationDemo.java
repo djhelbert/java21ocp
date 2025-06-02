@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.logging.Logger;
 
 public class ExternalizationDemo {
-    private static Logger logger = Logger.getLogger("org.example.io.externalization");
+    private final static Logger logger = Logger.getLogger("org.example.io.externalization");
 
     public static void main(String[] args) {
         User user = new User("nickname", "password");

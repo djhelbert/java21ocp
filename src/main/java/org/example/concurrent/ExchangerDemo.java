@@ -6,7 +6,6 @@ import java.util.concurrent.Executors;
 /**
  * The Exchanger class in Java can be used to share objects between two threads of type T.
  * The class provides only a single overloaded method exchange(T).
- *
  * When invoked exchange waits for the other thread in the pair to call it as well. At this point,
  * the second thread finds the first thread is waiting with its object. The thread exchanges the objects they
  * are holding and signals the exchange, and now they can return.
