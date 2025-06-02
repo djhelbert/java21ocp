@@ -55,6 +55,7 @@ public class IOStreams {
     private static void noWriteWithoutFlush(String path, String textToWrite) throws IOException {
         var bos = new BufferedOutputStream(new FileOutputStream(path));
         bos.write(textToWrite.getBytes());
+        bos.flush();
     }
 
     private static void writeFileToPathFileWriter(String path, String textToWrite) throws IOException {
