@@ -34,10 +34,10 @@ public class ExchangerDemo {
             }
         };
 
-        var es = Executors.newCachedThreadPool();
-        es.submit(run1);
-        es.submit(run2);
-
-        es.shutdown();
+        try (var es = Executors.newCachedThreadPool()) {
+            es.submit(run1);
+            es.submit(run2);
+            es.shutdown();
+        }
     }
 }
