@@ -13,7 +13,7 @@ public class ObjectInitialization {
     }
     public String name = "Second";
     { System.out.println(name); name = "Third"; System.out.println(name);}
-    private Other other = new Other();
+    private final Other other = new Other(); // Constructor of other class called before this
 
     public ObjectInitialization() {
         System.out.println("Sixth Constructor");  // After object initialization block

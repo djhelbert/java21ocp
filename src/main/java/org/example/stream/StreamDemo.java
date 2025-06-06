@@ -1,11 +1,13 @@
 package org.example.stream;
 
-import static java.util.stream.Collectors.*;
-import static org.example.Util.*;
+import org.example.Util;
 
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.*;
+import static org.example.Util.print;
 
 public class StreamDemo {
     public static void main(String[] args) {
@@ -29,9 +31,7 @@ public class StreamDemo {
         print(result);
 
         Optional<String> o = strings.stream().filter(s -> s.contains("ir")).findFirst(); // find first string with ir
-        if(o.isPresent()) {
-            print(o.get());
-        }
+        o.ifPresent(Util::print);
 
         OptionalInt oi = strings.stream().mapToInt(String::length).max(); // get max string length
         if(oi.isPresent()) {

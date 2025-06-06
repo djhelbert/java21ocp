@@ -7,7 +7,7 @@ import java.lang.reflect.Parameter;
 
 public class ReflectionDemo {
 
-    @SuppressWarnings({"rawtypes", "unchecked"})
+    @SuppressWarnings({"rawtypes"})
     public static void main(String[] args) throws ClassNotFoundException {
         Class c = Class.forName("org.example.reflection.Employee");
         Constructor[] constructors = c.getDeclaredConstructors();

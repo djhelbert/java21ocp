@@ -1,7 +1,5 @@
 package org.example.log;
 
-import java.io.IOException;
-import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,12 +14,13 @@ import java.util.logging.Logger;
  * and discards log requests that are below this level.
  */
 public class Logs {
-    private static Logger logger = Logger.getLogger("org.example.log");
+    private static final Logger logger = Logger.getLogger("org.example.log");
 
     public static void main(String... args)  {
         try {
             // FileHandler fh = new FileHandler("mylog.txt");
             // logger.addHandler(fh);
+            System.out.println("Add handler");
         } catch (Exception e) {
             logger.log(Level.SEVERE, "severe error", e);
         }

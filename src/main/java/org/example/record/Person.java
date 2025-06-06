@@ -5,8 +5,8 @@ import java.util.Objects;
 /**
  * Records are immutable data classes that require only the type and name of fields.
  *
- * @param name
- * @param address
+ * @param name Name
+ * @param address Address
  */
 public record Person(String name, String address) {
     public static String UNKNOWN_ADDRESS = "Unknown";

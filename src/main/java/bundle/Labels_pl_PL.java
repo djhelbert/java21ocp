@@ -2,6 +2,9 @@ package bundle;
 
 import java.util.ListResourceBundle;
 
+/**
+ * Unlike a properties file, the values do not have to be a string.
+ */
 public class Labels_pl_PL extends ListResourceBundle {
 
     @Override
