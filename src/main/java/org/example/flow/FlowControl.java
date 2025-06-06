@@ -2,14 +2,14 @@ package org.example.flow;
 
 public class FlowControl {
     public static void main(String[] args) {
-        int x = 12;
+        int x = (int)(Math.random() * 20.0);
 
         if (x < 12) {
-            System.out.println("Less Than 12");
+            System.out.println(x + " is less Than 12");
         } else if (x == 12) {
             System.out.println("12");
         } else {
-            System.out.println("Greater Than 12");
+            System.out.println(x + " is greater Than 12");
         }
 
         do {
@@ -37,7 +37,7 @@ public class FlowControl {
             loop2:
             for (int j = 0; j < 5; j++) {
                 System.out.println("counter j: " + j);
-                if (j >= 0 && j < 3) {
+                if (j < 3) {
                     System.out.println("continue loop2");
                     continue loop2;
                 } else {

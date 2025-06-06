@@ -137,7 +137,7 @@ public class IOStreams {
                     .sorted()
                     .map(String::valueOf)
                     .collect(Collectors.joining(";"));
-            if (joined != null && !joined.isEmpty()) {
+            if (!joined.isEmpty()) {
                 System.out.println("Found: " + joined);
             }
         }
