@@ -18,10 +18,13 @@ public class Numbers {
         bshift >>= 2;
         System.out.println("Shifted   " + bshift); // 2^0 * 1 + 2^1 * 0 + 2^2 * 0    eg. 0b000001
         System.out.println("|         " + (0b0000001 | 0b0000011)); // or results in 3 and would be 1
-        System.out.println("Flip bits " + ~1);
+        System.out.println("Flip bits 1 is " + (~1));
 
         int neg = -64;
-        System.out.println("-64 >> "  + (neg >> 1));  // remains negative
-        System.out.println("-64 >>> " + (neg >>> 1)); // unsigned shift becomes large positive number
+        System.out.println("-64 >>  "  + (neg >> 1));  // remains negative
+        System.out.println("-64 >>> "  + (neg >>> 1)); // unsigned shift becomes large positive number
+        System.out.println("-88 >>> "  + (neg >>> -88)); // unsigned shift becomes large positive number
+
+        String oString = Integer.toOctalString(12);
     }
 }

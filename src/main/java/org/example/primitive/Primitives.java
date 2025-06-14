@@ -5,7 +5,7 @@ package org.example.primitive;
  *
  * If two values have different data types, Java will automatically promote one of the values to the larger of the two data types.
  * If one of the values is integral and the other is floating-point, Java will automatically promote the integral value to the floating-point value’s data type.
- * Smaller data types, namely byte, short, and char, are first promoted to int any time they’re used with a Java binary arithmetic operator,
+ * Smaller data types such as byte, short, and char, are first promoted to int any time they’re used with a Java binary arithmetic operator,
  * even if neither of the operands is int.
  * After all promotion has occurred and the operands have the same data type, the resulting value will have the same data type as its promoted operands
  */

@@ -2,8 +2,7 @@ package org.example.primitive;
 
 /**
  * Operator Precedence
- *
- * () ++ -- -(unary) ~ ! * / % + - << >> >>> & ^ |
+ * () (first) ++ -- + - ~ ! (unary) * / % (multiply) + - (additive) << >> >>> & ^ |
  */
 public class Operators {
     public static void main(String[] args) {
