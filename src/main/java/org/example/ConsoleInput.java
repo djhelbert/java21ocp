@@ -13,11 +13,13 @@ public class ConsoleInput {
         System.out.print("Please, enter any integer number: ");
         int i = sc.nextInt();
         System.out.println("You entered this integer number: " + i);
-        System.out.print("Skipping next line: ");
+        System.out.println("Skipping next line...");
         sc.nextLine();
 
         Pattern p = sc.delimiter(); // What pattern is being used
+        System.out.println(p);
         Locale loc = sc.locale();
+        System.out.println(loc);
 
         sc.close(); // Close the scanner
     }

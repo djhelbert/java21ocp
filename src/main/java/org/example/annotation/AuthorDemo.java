@@ -15,8 +15,8 @@ public class AuthorDemo {
     }
 
     @Override
-    @Author(name = "Bruce Willis")
-    @Author(name = "Tom Cruise")
+    @Author(name = "Bruce Williams", books = 2)
+    @Author(name = "Tom Jenkins")
     public String toString() {
         return "Demo[getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() +"]";
     }
