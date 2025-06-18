@@ -31,7 +31,7 @@ public class Teacher extends Person {
 
     @Override
     public String toString() {
-        return getFirst() + " " + getLast() + " Subject: " + subject;
+        return "Teacher(" + getFirst() + " " + getLast() + " Subject: " + subject + ")";
     }
 
     public static class Classroom {

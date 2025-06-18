@@ -5,13 +5,13 @@ public enum DayEnum {
     TUESDAY(false), WEDNESDAY(false), THURSDAY(false),
     FRIDAY(false), SATURDAY(true);
 
-    boolean weekend;
+    final boolean weekend;
 
     /**
      * Must be private
-     * @param weekend
+     * @param weekend Weekend Flag
      */
-    private DayEnum(boolean weekend) {
+    DayEnum(boolean weekend) {
         this.weekend = weekend;
     }
 

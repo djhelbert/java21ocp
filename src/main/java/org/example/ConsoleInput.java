@@ -11,10 +11,10 @@ public class ConsoleInput {
         String word = sc.next();
         System.out.println("You entered this word: " + word);
         System.out.print("Please, enter any integer number: ");
-        int i = sc.nextInt();
+        int i = sc.nextInt();           // Many other types supported like nextBoolean(), nextFloat(), etc.
         System.out.println("You entered this integer number: " + i);
         System.out.println("Skipping next line...");
-        sc.nextLine();
+        String[] values = sc.nextLine().split(" ");
 
         Pattern p = sc.delimiter(); // What pattern is being used
         System.out.println(p);

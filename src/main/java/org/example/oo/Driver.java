@@ -52,7 +52,7 @@ public class Driver extends Person {
 
     @Override
     public String toString() {
-        return driverType.name() + " driver " + getFirst() + " " + getLast() + " since " + licenseDate.toString();
+        return "Driver(" + driverType.name() + " " + getFirst() + " " + getLast() + " since " + licenseDate.toString() + ")";
     }
 
     protected class Helmet {

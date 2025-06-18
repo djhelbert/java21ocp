@@ -9,6 +9,8 @@ public class OoDemo {
         Driver  c = new Driver("Timmy", "Smith", "", DriverType.BUS);
         Teacher t = new Teacher("Beatrice", "Crabtree","Biology");
 
+        System.out.println((Person)t); // Still uses toString() of teacher class
+
         List<Person> people = new ArrayList<>();
         people.add(d);
         people.add(t);
@@ -16,7 +18,7 @@ public class OoDemo {
         addTeacher(people, new Teacher("Tina", "Jenkins","Math"));
 
         if(d instanceof Person drvr) {
-            System.out.println(drvr.getFirst() + " " + drvr.getLast() + " is a Person");
+            System.out.println(drvr + " is a Person");
         }
 
         System.out.println("---People---");

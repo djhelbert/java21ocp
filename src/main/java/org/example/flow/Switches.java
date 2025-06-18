@@ -20,9 +20,7 @@ public class Switches {
 
         final Day day = Day.WEDNESDAY;
         int numLetters = switch (day) {
-            case MONDAY, FRIDAY, SUNDAY -> {
-                yield 6;
-            }
+            case MONDAY, FRIDAY, SUNDAY -> 6;
             case TUESDAY                -> {
                 yield 7;
             }

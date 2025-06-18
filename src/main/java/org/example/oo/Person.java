@@ -31,4 +31,9 @@ public abstract class Person implements Named {
     public void setLast(String last) {
         this.last = last;
     }
+
+    @Override
+    public String toString() {
+        return "Person(" + first + " " + last + ")";
+    }
 }
