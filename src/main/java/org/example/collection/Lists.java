@@ -25,9 +25,8 @@ public class Lists {
         print("Size:" + list.size());
         print(list);
 
-        List<Integer> linkedList = new LinkedList<>();
-        linkedList.addAll(List.of(1, 3, 6, 8, 9));
-        linkedList.add(0, 0);
+        List<Integer> linkedList = new LinkedList<>(List.of(1, 3, 6, 8, 9));
+        linkedList.addFirst(0);
 
         print(linkedList);
         print(linkedList.subList(2, 4));
@@ -47,7 +46,7 @@ public class Lists {
 
         List<Integer> ints = new ArrayList<>(List.of(6, 1, 2, 3));
         System.out.println(ints.size());
-        Collections.addAll(ints, new Integer[] {7, 4, 5});
+        Collections.addAll(ints, 7, 4, 5);
         print(ints);
         Collections.sort(ints);
         print(ints);

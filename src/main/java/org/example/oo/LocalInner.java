@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LocalInner {
     interface Local {
-        public void doStuff(); // public by default
+        void doStuff(); // public by default
     }
 
     int innerCount = 0;

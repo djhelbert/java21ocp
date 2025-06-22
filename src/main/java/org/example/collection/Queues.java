@@ -18,7 +18,9 @@ public class Queues {
 
         Integer in = q.remove(); // Removes the head element from the collection (can throw exception)
 
-        System.out.println("Size: " + q.size()); // size 4 after removing 5
+        if(in != null) {
+            System.out.println("Size: " + q.size()); // size 4 after removing 5
+        }
 
         q.poll(); // Removes head of the fifo queue (null if empty)
 
@@ -28,8 +30,6 @@ public class Queues {
             q.poll();
         }
 
-        if(q.isEmpty()) {
-            System.out.println("Queue is now empty");
-        }
+        System.out.println("Queue is now empty");
     }
 }
