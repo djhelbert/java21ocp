@@ -2,7 +2,7 @@ package org.example.flow;
 
 public class Switches {
     public static void main(String[] args) {
-        int n = 0;
+        int n = (int)(Math.random() * 7.0);
 
         switch(n) {
             case 0:

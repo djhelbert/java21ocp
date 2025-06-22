@@ -1,5 +1,6 @@
 module java21ocp { // open allows reflection for the entire module
     requires java.logging;
+    requires java.desktop;
     // requires static module_name; // compile time only
     // requires transitive module_name; // force any downstream consumers also to read our required dependencies
     exports org.example.module;

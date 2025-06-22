@@ -16,9 +16,11 @@ public class Queues {
         q.add(4);
         q.add(5);
 
-        q.remove(5);
+        Integer in = q.remove(); // Removes the head element from the collection (can throw exception)
 
         System.out.println("Size: " + q.size()); // size 4 after removing 5
+
+        q.poll(); // Removes head of the fifo queue (null if empty)
 
         while(!q.isEmpty()) {
             Integer i = q.peek();

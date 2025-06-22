@@ -10,9 +10,9 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class Dequeues {
     public static void main(String[] args) {
         Deque<Integer> dq = new LinkedBlockingDeque<>();
-        dq.add(3);         // Add to tail
-        dq.addFirst(2); // Throws exception if it fails with no return
-        dq.addLast(88); // Throws exception if it fails
+        dq.add(3);            // Add to tail
+        dq.addFirst(2);    // Throws exception if it fails with no return
+        dq.addLast(88);    // Throws exception if it fails
         dq.offerFirst(1);  // Returns false if it fails true if success
         dq.offerLast(99);  // Returns false if it fails true if success
 
