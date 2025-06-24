@@ -19,7 +19,7 @@ public class StreamDemo {
         strings.add("Fifth");
         strings.add("First");
 
-        strings.stream().filter(s -> !"Second".equals(s)).map(s -> s.toUpperCase()).sorted().forEach(System.out::println);
+        strings.stream().filter(s -> !"Second".equals(s)).map(String::toUpperCase).sorted().forEach(System.out::println);
 
         Map<String, Boolean> map = strings.stream().distinct().collect(toMap(Function.identity(), s -> s.contains("i")));
         print(map);

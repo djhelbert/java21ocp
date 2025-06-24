@@ -35,7 +35,6 @@ public class LocalInner {
             innerCount++;
             System.out.println("Lambda");
             // localCnt++; does not compile
-            return;
         };
 
         lam.doStuff();

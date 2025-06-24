@@ -1,6 +1,5 @@
 package org.example.collection;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
