@@ -8,10 +8,10 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReentrantReadWriteLockDemo {
 
-    private Map<String, String> syncHashMap = new HashMap<>();
-    private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
-    private Lock writeLock = readWriteLock.writeLock();
-    private Lock readLock = readWriteLock.readLock();
+    private final Map<String, String> syncHashMap = new HashMap<>();
+    private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+    private final Lock writeLock = readWriteLock.writeLock();
+    private final Lock readLock = readWriteLock.readLock();
 
     public void put(String key, String value) {
         try {

@@ -9,7 +9,10 @@ public class ExecutorsDemo {
         ExecutorService es = Executors.newCachedThreadPool();
         Future<Integer> future = es.submit(() -> 1 + 1);
 
-        System.out.println(future.get(10, TimeUnit.SECONDS));
+        es.submit(() -> System.out.println("Runnable"));
+
+        // future.get(); waits until thread is complete
+        System.out.println(future.get(10, TimeUnit.SECONDS)); // wait for a period of time
         es.shutdownNow();
     }
 
