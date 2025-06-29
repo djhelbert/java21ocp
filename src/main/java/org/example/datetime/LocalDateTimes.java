@@ -1,6 +1,10 @@
 package org.example.datetime;
 
+import java.text.SimpleDateFormat;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+import static org.example.Util.print;
 
 public class LocalDateTimes {
     public static void main(String[] args) {
@@ -12,6 +16,10 @@ public class LocalDateTimes {
         LocalDateTime now2   = LocalDateTime.of(localDate, localTime);
         LocalDateTime plus12 = now.plusHours(12);
 
+        DayOfWeek dow = now2.getDayOfWeek(); // enum
+        print(dow.name());
+        print(now.getYear());
+
         LocalDate aprilFools = LocalDate.of(2019, Month.APRIL, 1);
         int year = aprilFools.getYear();
         Duration duration = Duration.ofHours(2);
@@ -21,15 +29,22 @@ public class LocalDateTimes {
 
         // LocalTime is an immutable date-time object that represents a time, often viewed as hour-minute-second.
         LocalTime time = LocalTime.of(17, 30);		      // 5:30 pm with static method
-        LocalTime time2 = LocalTime.NOON;
+        LocalTime time2 = LocalTime.NOON;  // 12pm
+        print(time.isAfter(time2));        // true
 
         // A date-based amount of time in the ISO-8601 calendar system, such as '2 years, 3 months and 4 days'.
         Period p = Period.of(1, 0, 0);
-        LocalDate aprilFools2 = aprilFools.plus(p);
-        LocalDate aprilFools3 = aprilFools.minus(p);
+        print(p.toString());
+        print(p.getDays());
+        print(p.getMonths());
+
+        LocalDate aprilFools2 = aprilFools.plus(p);  // modify local date with period
+        LocalDate aprilFools3 = aprilFools.minus(p); // again
+
+        print(DateTimeFormatter.ofPattern("yyyy MM dd").format(aprilFools)); // if you use hh or ss  you get an error
 
         // A ZoneId is used to identify rules to convert between an Instant and a LocalDateTime.
-        ZoneId london = ZoneId.of("Europe/London");
+        ZoneId london   = ZoneId.of("Europe/London");
         ZoneId lalaLand = ZoneId.of("America/Los_Angeles");
 
         // ZonedDateTime is an immutable representation of a date-time with a time-zone.

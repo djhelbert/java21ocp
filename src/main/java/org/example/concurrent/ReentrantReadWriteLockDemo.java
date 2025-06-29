@@ -48,4 +48,15 @@ public class ReentrantReadWriteLockDemo {
             readLock.unlock();
         }
     }
+
+    public static void main(String[] args) {
+        ReentrantReadWriteLockDemo demo = new ReentrantReadWriteLockDemo();
+        demo.put("one","uno");
+        demo.put("two", "dos");
+        demo.put("three", "tre");
+        System.out.println(demo.get("one"));
+        System.out.println(demo.containsKey("one"));
+        demo.remove("three");
+        System.out.println(demo.containsKey("three"));
+    }
 }
