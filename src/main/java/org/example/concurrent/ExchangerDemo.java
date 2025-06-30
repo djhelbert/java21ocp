@@ -17,7 +17,7 @@ public class ExchangerDemo {
 
         Runnable run1 = () -> {
             try {
-                String msg = exchanger.exchange("Message #1");
+                String msg = exchanger.exchange("Message #1"); // Waits for another thread to arrive at this point
                 System.out.println("Received from another thread in task #1: " + msg);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -26,7 +26,7 @@ public class ExchangerDemo {
 
         Runnable run2 = () -> {
             try {
-                String msg = exchanger.exchange("Message #2");
+                String msg = exchanger.exchange("Message #2");  // Waits for another thread to arrive at this point
                 System.out.println("Received from another thread in task #2: " + msg);
             } catch (InterruptedException e) {
                 e.printStackTrace();

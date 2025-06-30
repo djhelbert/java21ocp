@@ -1,14 +1,14 @@
 package org.example.concurrent;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReentrantReadWriteLockDemo {
 
-    private final Map<String, String> syncHashMap = new HashMap<>();
+    private final Map<String, String> syncHashMap = new ConcurrentHashMap<>();
     private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
     private final Lock writeLock = readWriteLock.writeLock();
     private final Lock readLock = readWriteLock.readLock();
@@ -54,6 +54,7 @@ public class ReentrantReadWriteLockDemo {
         demo.put("one","uno");
         demo.put("two", "dos");
         demo.put("three", "tre");
+        demo.put("four", "four");
         System.out.println(demo.get("one"));
         System.out.println(demo.containsKey("one"));
         demo.remove("three");
